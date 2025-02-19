@@ -1511,9 +1511,6 @@
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-fuchsia-800 {
-    background-color: var(--color-fuchsia-800);
-  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1540,6 +1537,12 @@
   }
   .bg-\[url\(\.\/image\/hero\.webp\)\] {
     background-image: url(./image/hero.webp);
+  }
+  .bg-\[url\(\.\/image\/hero1\.png\)\] {
+    background-image: url(./image/hero1.png);
+  }
+  .bg-\[url\(\.\/image\/hero2\.png\)\] {
+    background-image: url(./image/hero2.png);
   }
   .bg-none {
     background-image: none;
@@ -1822,11 +1825,17 @@
   .text-\[18px\] {
     font-size: 18px;
   }
+  .text-\[20px\] {
+    font-size: 20px;
+  }
   .text-\[28px\] {
     font-size: 28px;
   }
   .text-\[38px\] {
     font-size: 38px;
+  }
+  .text-\[40px\] {
+    font-size: 40px;
   }
   .text-\[48px\] {
     font-size: 48px;
@@ -2389,13 +2398,6 @@
       }
     }
   }
-  .hover\:bg-\[\#232a30\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #232a30;
-      }
-    }
-  }
   .hover\:text-amber-200 {
     &:hover {
       @media (hover: hover) {
@@ -2546,6 +2548,11 @@
       font-size: 38px;
     }
   }
+  .lg\:text-\[40px\] {
+    @media (width >= 64rem) {
+      font-size: 40px;
+    }
+  }
   .lg\:text-\[48px\] {
     @media (width >= 64rem) {
       font-size: 48px;
@@ -2554,6 +2561,16 @@
   .lg\:text-\[68px\] {
     @media (width >= 64rem) {
       font-size: 68px;
+    }
+  }
+  .lg\:text-\[80px\] {
+    @media (width >= 64rem) {
+      font-size: 80px;
+    }
+  }
+  .lg\:text-\[120px\] {
+    @media (width >= 64rem) {
+      font-size: 120px;
     }
   }
   .lg\:text-\[150px\] {
