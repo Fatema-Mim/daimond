@@ -2396,20 +2396,6 @@
       }
     }
   }
-  .hover\:text-\[\#181f25\] {
-    &:hover {
-      @media (hover: hover) {
-        color: #181f25;
-      }
-    }
-  }
-  .hover\:text-amber-200 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-amber-200);
-      }
-    }
-  }
   .sm\:mt-20 {
     @media (width >= 40rem) {
       margin-top: calc(var(--spacing) * 20);

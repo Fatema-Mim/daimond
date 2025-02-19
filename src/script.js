@@ -1,3 +1,25 @@
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+      }, 4000);
+    }
+  }
+});
+
+
+
 $(".responsive").slick({
   dots: false,
   infinite: true,
@@ -5,8 +27,6 @@ $(".responsive").slick({
   slidesToShow: 3,
   slidesToScroll: 3,
   arrows: true,
-  prevArrow: `<button type="button" class="slick-prev"> < </button>`,
-  nextArrow: `<button type="button" class="slick-next">></button>`,
   responsive: [
     {
       breakpoint: 1024,
