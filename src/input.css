@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+.slick-slide {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px; /* Prevents layout shifting */
+}
+
+
+.slick-next:before, .slick-prev:before{
+  color: #232a30 !important;
+  font-size: 40px !important;
+}
+
+@theme {
+    --font-title: "Lora", "sans-serif";
+    --font-title--font-optical-sizing: "auto"; 
+    --font-body: "Montserrat", "serif";
+    --font-body--font-optical-sizing: "auto";
+    --spacing-about: 600px; 
+    --spacing-about-sm: 280px; 
+    --spacing-lab: 518px; 
+    --spacing-lab-sm: 260px; 
+  }
