@@ -1538,12 +1538,6 @@
   .bg-\[url\(\.\/image\/hero\.webp\)\] {
     background-image: url(./image/hero.webp);
   }
-  .bg-\[url\(\.\/image\/hero1\.png\)\] {
-    background-image: url(./image/hero1.png);
-  }
-  .bg-\[url\(\.\/image\/hero2\.png\)\] {
-    background-image: url(./image/hero2.png);
-  }
   .bg-none {
     background-image: none;
   }
@@ -1839,9 +1833,6 @@
   }
   .text-\[48px\] {
     font-size: 48px;
-  }
-  .text-\[60px\] {
-    font-size: 60px;
   }
   .leading-\[70px\] {
     --tw-leading: 70px;
@@ -2391,10 +2382,24 @@
   .transform-view {
     transform-box: view-box;
   }
+  .hover\:bg-\[\#181f25\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #181f25;
+      }
+    }
+  }
   .hover\:bg-\[\#1c2228\] {
     &:hover {
       @media (hover: hover) {
         background-color: #1c2228;
+      }
+    }
+  }
+  .hover\:text-\[\#181f25\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #181f25;
       }
     }
   }
@@ -2566,16 +2571,6 @@
   .lg\:text-\[80px\] {
     @media (width >= 64rem) {
       font-size: 80px;
-    }
-  }
-  .lg\:text-\[120px\] {
-    @media (width >= 64rem) {
-      font-size: 120px;
-    }
-  }
-  .lg\:text-\[150px\] {
-    @media (width >= 64rem) {
-      font-size: 150px;
     }
   }
   .lg\:leading-\[120px\] {
