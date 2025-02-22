@@ -591,8 +591,8 @@
   .end-2 {
     inset-inline-end: calc(var(--spacing) * 2);
   }
-  .top-110 {
-    top: calc(var(--spacing) * 110);
+  .top-92 {
+    top: calc(var(--spacing) * 92);
   }
   .left-8 {
     left: calc(var(--spacing) * 8);
@@ -720,8 +720,11 @@
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
-  .mt-16 {
-    margin-top: calc(var(--spacing) * 16);
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
   }
   .mb-28 {
     margin-bottom: calc(var(--spacing) * 28);
@@ -813,14 +816,8 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
   .h-20 {
     height: calc(var(--spacing) * 20);
-  }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
   }
   .h-about-sm {
     height: var(--spacing-about-sm);
@@ -848,6 +845,9 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
   }
   .w-28 {
     width: calc(var(--spacing) * 28);
@@ -1535,8 +1535,8 @@
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\.\/image\/hero\.webp\)\] {
-    background-image: url(./image/hero.webp);
+  .bg-\[url\(\.\/image\/herosm\.jpg\)\] {
+    background-image: url(./image/herosm.jpg);
   }
   .bg-none {
     background-image: none;
@@ -1701,6 +1701,9 @@
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -1718,6 +1721,12 @@
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .py-\[0px\] {
+    padding-block: 0px;
+  }
+  .py-\[40px\] {
+    padding-block: 40px;
   }
   .py-\[60px\] {
     padding-block: 60px;
@@ -1737,17 +1746,20 @@
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
-  .pt-8 {
-    padding-top: calc(var(--spacing) * 8);
-  }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
+  }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
   }
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
@@ -1929,6 +1941,12 @@
   }
   .text-gray-700 {
     color: var(--color-gray-700);
+  }
+  .text-green-500 {
+    color: var(--color-green-500);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
@@ -2286,6 +2304,9 @@
   .forced-color-adjust-none {
     forced-color-adjust: none;
   }
+  .\[hostname\:port\] {
+    hostname: port;
+  }
   .\[keywords\:node-addon-api\] {
     keywords: node-addon-api;
   }
@@ -2416,14 +2437,34 @@
       flex-direction: row;
     }
   }
+  .md\:top-110 {
+    @media (width >= 48rem) {
+      top: calc(var(--spacing) * 110);
+    }
+  }
   .md\:col-span-2 {
     @media (width >= 48rem) {
       grid-column: span 2 / span 2;
     }
   }
+  .md\:mt-10 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:bg-\[url\(\.\/image\/hero\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(./image/hero.jpg);
+    }
+  }
+  .md\:text-\[\#232a30\] {
+    @media (width >= 48rem) {
+      color: #232a30;
     }
   }
   .lg\:left-16 {
@@ -2506,6 +2547,11 @@
       padding-block: calc(var(--spacing) * 10);
     }
   }
+  .lg\:py-\[60px\] {
+    @media (width >= 64rem) {
+      padding-block: 60px;
+    }
+  }
   .lg\:py-\[100px\] {
     @media (width >= 64rem) {
       padding-block: 100px;
@@ -2575,32 +2621,43 @@
       font-size: 48px;
     }
   }
+  .lg\:text-\[58px\] {
+    @media (width >= 64rem) {
+      font-size: 58px;
+    }
+  }
   .lg\:text-\[68px\] {
     @media (width >= 64rem) {
       font-size: 68px;
     }
   }
-  .lg\:text-\[80px\] {
+  .lg\:leading-\[110px\] {
     @media (width >= 64rem) {
-      font-size: 80px;
-    }
-  }
-  .lg\:leading-\[120px\] {
-    @media (width >= 64rem) {
-      --tw-leading: 120px;
-      line-height: 120px;
+      --tw-leading: 110px;
+      line-height: 110px;
     }
   }
 }
-.slick-slide {
-  margin: 0 10px;
-}
-.slick-list {
-  margin: 0 -10px;
+.slick-prev {
+  z-index: 999;
 }
 .slick-next:before, .slick-prev:before {
   color: #232a30 !important;
   font-size: 40px !important;
+}
+.hero {
+  background-image: url("./image/hero.webp");
+}
+.hero-sm {
+  background-image: url("./image/herosm.webp");
+}
+@media (max-width: 768px) {
+  .slick-prev {
+    left: -5px !important;
+  }
+  .slick-next {
+    right: 5px !important;
+  }
 }
 @keyframes spin {
   to {

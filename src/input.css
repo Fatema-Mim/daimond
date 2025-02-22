@@ -2,17 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-.slick-slide {
-  margin: 0 10px;
-}
-.slick-list {
-  margin: 0 -10px; /* Prevents layout shifting */
-}
 
 
+.slick-prev{
+  z-index: 999;
+}
 .slick-next:before, .slick-prev:before{
   color: #232a30 !important;
   font-size: 40px !important;
+}
+.hero {
+  background-image: url("./image/hero.webp");
+}
+.hero-sm{
+  background-image: url("./image/herosm.webp");
+}
+@media  (max-width: 768px) { 
+  .slick-prev {
+    left: -5px !important;
+  }
+  .slick-next {
+    right: 5px !important;
+  }
 }
 
 @theme {
@@ -24,4 +35,4 @@
     --spacing-about-sm: 280px; 
     --spacing-lab: 518px; 
     --spacing-lab-sm: 260px; 
-  }
+}

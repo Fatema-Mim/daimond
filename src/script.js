@@ -51,8 +51,56 @@ $(".responsive").slick({
         slidesToScroll: 1,
       },
     },
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ],
 });
+
+document.getElementById("ringForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let isValid = true;
+  let responseMessage = document.querySelector(".response");
+
+  function validateField(id, errorId) {
+    let field = document.getElementById(id);
+    let errorMsg = document.getElementById(errorId);
+    if (!field.value.trim()) {
+      errorMsg.classList.remove("hidden");
+      isValid = false;
+    } else {
+      errorMsg.classList.add("hidden");
+    }
+  }
+
+  validateField("fullName", "nameError");
+  validateField("email", "emailError");
+  validateField("phone", "phoneError");
+  validateField("address", "addressError");
+  validateField("metalType", "metalError");
+  validateField("budget", "budgetError");
+  validateField("shape", "shapeError");
+  validateField("timeline", "timelineError");
+  validateField("message", "messageError");
+
+  if (!isValid) return;
+
+  let formData = new FormData(this);
+
+  fetch("./src/sendmail.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then(response => response.text())
+    .then(data => {
+      responseMessage.textContent = "Your request has been sent successfully!";
+      responseMessage.classList.remove("text-red-500");
+      responseMessage.classList.add("text-green-500");
+      document.getElementById("ringForm").reset();
+    })
+    .catch(error => {
+      responseMessage.textContent = "Error sending message. Try again later.";
+      responseMessage.classList.remove("text-green-500");
+      responseMessage.classList.add("text-red-500");
+    });
+});
+
+
