@@ -726,6 +726,9 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
   .mb-28 {
     margin-bottom: calc(var(--spacing) * 28);
   }
@@ -1701,9 +1704,6 @@
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -1721,9 +1721,6 @@
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
-  }
-  .py-\[0px\] {
-    padding-block: 0px;
   }
   .py-\[40px\] {
     padding-block: 40px;
@@ -1748,9 +1745,6 @@
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
-  }
-  .pb-2 {
-    padding-bottom: calc(var(--spacing) * 2);
   }
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
@@ -2460,11 +2454,6 @@
   .md\:bg-\[url\(\.\/image\/hero\.jpg\)\] {
     @media (width >= 48rem) {
       background-image: url(./image/hero.jpg);
-    }
-  }
-  .md\:text-\[\#232a30\] {
-    @media (width >= 48rem) {
-      color: #232a30;
     }
   }
   .lg\:left-16 {

@@ -24,12 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Server settings for SSL
         $mail->isSMTP();
-        $mail->Host = 'mail.naturalborndiamonds.com'; // SMTP server
+        $mail->Host = ''; // SMTP server
         $mail->SMTPAuth = true;
-        $mail->Username = 'damian@naturalborndiamonds.com'; // SMTP username
-        $mail->Password = '_0ja!u*tMmi&'; // SMTP password
+        $mail->Username = ''; // SMTP username
+        $mail->Password = ''; // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Use SSL for security
-        $mail->Port = 465; // SSL port
+        $mail->Port = ; // SSL port
 
         // Enable debug output
         $mail->SMTPDebug = 0; // Set this to 2 for detailed debugging output
@@ -38,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }; // Capture debug output and display
 
         // Recipients
-        $mail->setFrom('damian@naturalborndiamonds.com', 'NATURAL BORN');
-        $mail->addAddress('info@naturalborndiamonds.com', $full_name); // Recipient email
+        $mail->setFrom('');
+        $mail->addAddress('', $full_name); // Recipient email
         $mail->addReplyTo($email, $full_name); // Reply-to address
 
         // Content
